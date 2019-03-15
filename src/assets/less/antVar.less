@@ -1,0 +1,53 @@
+// -------- animations -----------
+/*-- All Transition linear --*/
+.all-tra-linear(@propery){
+    -webkit-transition: @propery;
+    -moz-transition: @propery;
+    -ms-transition: @propery;
+    -o-transition: @propery;
+    transition: @propery;
+}
+
+// -------- Media Querys -----------
+/* 
+##Device = Desktops
+##Screen = 1281px to higher resolution desktops
+*/
+@desktops: ~"only screen and (min-width: 1281px)";
+@media @desktops {}
+  
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+@lapDesktops: ~"only screen and (min-width: 1025px) and (max-width: 1280px)";
+@media @lapDesktops {}
+  
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+@ipadsPortrait: ~"only screen and (min-width: 768px) and (max-width: 1024px)";
+@media @ipadsPortrait {}
+  
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+@ipadsLandscape: ~"only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)";
+@media @ipadsLandscape {
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+@mobiLandscape: ~"only screen and (min-width: 481px) and (max-width: 767px)";
+@media @mobiLandscape {}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@mobiPortrait: ~"only screen and (min-width: 320px) and (max-width: 480px)";
+@media @mobiPortrait {}
